@@ -12,6 +12,7 @@ source=("git+$url.git")
 sha256sums=('SKIP')
 
 package() {
-        cd $srcdir/$pkgname
+	cd $srcdir/$pkgname
 	install -dm755 $pkgdir/usr/bin
+	cp -r $srcdir/$pkgname/kibojoe $pkgdir/usr/bin
 }
